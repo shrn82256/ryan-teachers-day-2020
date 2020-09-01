@@ -1,0 +1,30 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#Navbar {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 12px;
+
+  img.navbar-logo {
+    height: 150px;
+  }
+}
+
+#TeachersGrid {
+  div.teacher-card > div.card:hover {
+    cursor: pointer;
+  }
+}
+
+#Photos {
+  div.photo-card > div.card:hover {
+    cursor: pointer;
+  }
+}
