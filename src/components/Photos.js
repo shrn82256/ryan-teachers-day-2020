@@ -27,18 +27,9 @@ function Photos() {
       <div className="card" onClick={() => onPhotoCardClick(i)}>
         <div className="card-image">
           <figure className="image is-4by3">
-            <img className="photo" alt={`Photo-${i}`} src={photo} />
+            <img className="photo" alt={`card-${i}`} src={photo} />
           </figure>
         </div>
-        {/* <div className="card-content">
-          <div className="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            nec iaculis mauris. <a>@bulmaio</a>.<a href="#">#css</a>{' '}
-            <a href="#">#responsive</a>
-            <br />
-            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-          </div>
-        </div> */}
       </div>
     </div>
   );
@@ -51,7 +42,7 @@ function Photos() {
       />
       <div className="modal-content">
         <p className="image">
-          <img src={photos[currentPhotoIndex]} alt="Photo-modal" />
+          <img src={photos[currentPhotoIndex]} alt="modal" />
         </p>
       </div>
       <button

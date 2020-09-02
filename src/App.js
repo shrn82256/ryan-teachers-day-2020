@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import teachersDb from './data.json';
 import Hero from './components/Hero';
@@ -9,12 +9,7 @@ import Footer from './components/Footer';
 import TeachersGrid from './components/TeachersGrid';
 
 function App() {
-  // const [isLoading, setLoadingStatus] = useState(false);
   const [teachers, setTeachers] = useState(teachersDb);
-
-  /* useEffect(() => {
-    setLoadingStatus(false);
-  }, []); */
 
   return (
     <div className="App">
