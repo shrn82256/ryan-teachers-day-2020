@@ -1,12 +1,13 @@
 import React from 'react';
 
-import ryanLogo from '../assets/ryan_logo.jpg';
+import banner from '../assets/banner.png';
 
 function Navbar() {
   return (
-    <div id="Navbar">
-      <img className="navbar-logo" src={ryanLogo} alt="Ryan Logo" />
-      <div>Night mode button</div>
+    <div id="Navbar" className="columns is-multiline">
+      <div className="column is-6 is-offset-3">
+        <img className="navbar-banner" src={banner} alt="Happy Teachers Day" />
+      </div>
     </div>
   );
 }

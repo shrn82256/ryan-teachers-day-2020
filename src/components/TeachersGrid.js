@@ -16,15 +16,29 @@ function TeachersGrid({ teachers }) {
     setTeacherModalStatus(true);
   };
 
-  const renderTeacherCard = (teacher, i) => (
-    <div className="column is-one-fifth teacher-card" key={i}>
-      <div className="card" onClick={() => onTeacherCardClick(i)}>
-        <div className="card-content">{teacher.name}</div>
+  const renderTeacherCard = (teacher, i) => {
+    const isLastCard = i === 14;
+    const onCardClick = isLastCard ? null : () => onTeacherCardClick(i);
+    const cardContent = isLastCard ? 'and many more...' : teacher.name;
+
+    return (
+      <div className="column is-one-fifth teacher-card" key={i}>
+        <div
+          className="card has-background-dark has-text-light"
+          onClick={onCardClick}
+        >
+          <div className="card-content">
+            <span className="card-title">{cardContent}</span>
+            <span className="tag is-link">{teacher.class}</span>
+          </div>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   const renderTeacherModal = () => {
+    if (teachers.length === 0) return null;
+
     const teacher = teachers[currentTeacherIndex];
 
     return (
@@ -58,6 +72,7 @@ function TeachersGrid({ teachers }) {
 
   return (
     <div id="TeachersGrid" className="columns is-multiline">
+      {teachers.length < 1 && <div>hey</div>}
       {teachers.map(renderTeacherCard)}
       {renderTeacherModal()}
     </div>

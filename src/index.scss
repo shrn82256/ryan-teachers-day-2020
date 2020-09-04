@@ -4,22 +4,80 @@ body,
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+#root,
+#Footer {
+  background-color: #302d31;
 }
 
 #Navbar {
+  padding: 0 12px;
+
+  img.navbar-banner {
+    width: 100%;
+  }
+}
+
+#Videos {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
 
-  padding: 12px;
+  div.thumbnail {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  img.navbar-logo {
-    height: 150px;
+    div.thumbnail-emoji {
+      height: 100px;
+      width: 100px;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 50;
+
+      img {
+        width: 60%;
+        height: 60%;
+      }
+    }
+
+    div.thumbnail-title {
+      font-size: 1.2em;
+    }
+  }
+}
+
+#Search {
+  padding: 60px 40px 20px 40px;
+
+  input::placeholder {
+    color: lightgrey;
   }
 }
 
 #TeachersGrid {
-  div.teacher-card > div.card:hover {
-    cursor: pointer;
+  div.teacher-card {
+    div.card:hover {
+      cursor: pointer;
+    }
+
+    div.card-content {
+      display: flex;
+      justify-content: space-between;
+
+      span.card-title {
+        font-size: 1.4em;
+      }
+
+      span.tag {
+        font-weight: bold;
+      }
+    }
   }
 }
 
@@ -27,4 +85,18 @@ body,
   div.photo-card > div.card:hover {
     cursor: pointer;
   }
+}
+
+#Footer {
+  img.footer-logo {
+    height: 200px;
+  }
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-75 {
+  width: 100%;
 }
