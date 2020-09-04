@@ -24,8 +24,9 @@ body,
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding-top: 20px;
 
-  div.thumbnail {
+  .thumbnail {
     flex-direction: column;
     display: flex;
     justify-content: center;
@@ -62,6 +63,10 @@ body,
 
 #TeachersGrid {
   div.teacher-card {
+    div.card {
+      border-radius: 25px;
+    }
+
     div.card:hover {
       cursor: pointer;
     }
@@ -71,7 +76,7 @@ body,
       justify-content: space-between;
 
       span.card-title {
-        font-size: 1.4em;
+        font-size: 1.2em;
       }
 
       span.tag {
