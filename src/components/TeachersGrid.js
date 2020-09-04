@@ -22,7 +22,7 @@ function TeachersGrid({ teachers }) {
     const cardContent = isLastCard ? 'and many more...' : teacher.name;
 
     return (
-      <div className="column is-one-fifth teacher-card" key={i}>
+      <div className="column is-one-quarter teacher-card" key={i}>
         <div
           className="card has-background-dark has-text-light"
           onClick={onCardClick}
