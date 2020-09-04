@@ -17,9 +17,12 @@ function TeachersGrid({ teachers }) {
   };
 
   const renderTeacherCard = (teacher, i) => {
-    const isLastCard = i === 14;
+    const isLastCard = i === 15;
     const onCardClick = isLastCard ? null : () => onTeacherCardClick(i);
     const cardContent = isLastCard ? 'and many more...' : teacher.name;
+    const classTag = isLastCard ? null : (
+      <span className="tag is-link">{teacher.class}</span>
+    );
 
     return (
       <div className="column is-one-quarter teacher-card" key={i}>
@@ -29,7 +32,7 @@ function TeachersGrid({ teachers }) {
         >
           <div className="card-content">
             <span className="card-title">{cardContent}</span>
-            <span className="tag is-link">{teacher.class}</span>
+            {classTag}
           </div>
         </div>
       </div>
