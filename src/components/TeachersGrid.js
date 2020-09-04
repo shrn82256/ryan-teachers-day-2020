@@ -27,10 +27,7 @@ function TeachersGrid({ teachers }) {
 
     return (
       <div className="column is-one-quarter teacher-card" key={i}>
-        <div
-          className="card has-background-dark has-text-light"
-          onClick={onCardClick}
-        >
+        <div className="card has-text-light" onClick={onCardClick}>
           <div className="card-content">
             <span className="card-title">{cardContent}</span>
             {classTag}
@@ -95,7 +92,6 @@ function TeachersGrid({ teachers }) {
 
   return (
     <div id="TeachersGrid" className="columns is-multiline">
-      {teachers.length < 1 && <div>hey</div>}
       {teachers.map(renderTeacherCard)}
       {renderTeacherModal()}
     </div>
