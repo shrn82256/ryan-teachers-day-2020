@@ -84,6 +84,19 @@ body,
       }
     }
   }
+
+  div.teacher-modal {
+    div.modal-content {
+      border: 10px solid grey;
+
+      div.card {
+        background-color: #346b31;
+        div.card-content {
+          background-color: inherit;
+        }
+      }
+    }
+  }
 }
 
 #Photos {

@@ -44,25 +44,45 @@ function TeachersGrid({ teachers }) {
 
     const teacher = teachers[currentTeacherIndex];
 
+    const teacherName = (
+      <div style={{ fontSize: '2em', fontWeight: 'bold' }}>{teacher.name}</div>
+    );
+    const teacherClass = (
+      <span
+        className="tag is-light"
+        style={{ fontWeight: 'bold', fontSize: '1em' }}
+      >
+        {teacher.class}
+      </span>
+    );
+    const teacherQuality = (
+      <div style={{ fontSize: '1.2em' }}>
+        <span>What we love about you: </span>
+        <span style={{ fontWeight: 'bold' }}>{teacher.quality}</span>
+      </div>
+    );
+
     return (
       <div
-        className={classNames('modal', { 'is-active': isTeacherModalActive })}
+        className={classNames('teacher-modal modal', {
+          'is-active': isTeacherModalActive,
+        })}
       >
         <div
           className="modal-background"
           onClick={() => setTeacherModalStatus(false)}
         />
         <div className="modal-content">
-          <div className="card">
+          <div className="card has-text-light" style={{ padding: 20 }}>
             <div className="card-content">
-              {teacher.name}
+              <div className="columns">
+                <div className="column is-8">{teacherName}</div>
+                <div className="column is-4 has-text-right">{teacherClass}</div>
+              </div>
               <br />
-              {teacher.class}
-              <br />
-              {teacher.quality}
+              {teacherQuality}
             </div>
           </div>
-          `
         </div>
         <button
           className="modal-close is-large"
