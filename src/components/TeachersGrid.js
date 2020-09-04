@@ -20,9 +20,10 @@ function TeachersGrid({ teachers }) {
     const isLastCard = i === 11;
     const onCardClick = isLastCard ? null : () => onTeacherCardClick(i);
     const cardContent = isLastCard ? 'and many more...' : teacher.name;
-    const classTag = isLastCard ? null : (
-      <span className="tag is-link">{teacher.class}</span>
-    );
+    const classTag =
+      isLastCard || !teacher.class ? null : (
+        <span className="tag is-link">{teacher.class}</span>
+      );
 
     return (
       <div className="column is-one-quarter teacher-card" key={i}>
@@ -47,18 +48,24 @@ function TeachersGrid({ teachers }) {
     const teacherName = (
       <div style={{ fontSize: '2em', fontWeight: 'bold' }}>{teacher.name}</div>
     );
-    const teacherClass = (
+    const teacherClass = teacher.class ? (
       <span
         className="tag is-light"
         style={{ fontWeight: 'bold', fontSize: '1em' }}
       >
         {teacher.class}
       </span>
-    );
+    ) : null;
     const teacherQuality = (
       <div style={{ fontSize: '1.2em' }}>
-        <span>We love you beacuse you're </span>
-        <span style={{ fontWeight: 'bold' }}>{teacher.quality}</span>
+        {teacher.quality ? (
+          <>
+            <span>We love you beacuse you're </span>
+            <span style={{ fontWeight: 'bold' }}>{teacher.quality}</span>
+          </>
+        ) : (
+          teacher.note
+        )}
       </div>
     );
 
