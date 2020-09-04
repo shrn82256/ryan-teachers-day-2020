@@ -57,7 +57,7 @@ function TeachersGrid({ teachers }) {
     );
     const teacherQuality = (
       <div style={{ fontSize: '1.2em' }}>
-        <span>What we love about you: </span>
+        <span>We love you beacuse you're </span>
         <span style={{ fontWeight: 'bold' }}>{teacher.quality}</span>
       </div>
     );
