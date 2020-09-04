@@ -26,7 +26,7 @@ function Search({ setTeachers }) {
     if (query) teachers = fuse.search(query).map(({ item }) => item);
     else teachers = teachersDb;
 
-    setTeachers(teachers.slice(0, 16));
+    setTeachers(teachers.slice(0, 12));
   }, [query, setTeachers]);
 
   return (

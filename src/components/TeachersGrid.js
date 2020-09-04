@@ -17,7 +17,7 @@ function TeachersGrid({ teachers }) {
   };
 
   const renderTeacherCard = (teacher, i) => {
-    const isLastCard = i === 15;
+    const isLastCard = i === 11;
     const onCardClick = isLastCard ? null : () => onTeacherCardClick(i);
     const cardContent = isLastCard ? 'and many more...' : teacher.name;
     const classTag = isLastCard ? null : (
