@@ -35,7 +35,7 @@ function Search({ setTeachers }) {
         <div className="control w-100">
           <input
             ref={searchBoxRef}
-            className="input is-rounded has-background-dark has-text-white"
+            className="input is-large is-rounded has-background-dark has-text-white"
             type="text"
             placeholder="Enter Teacher's name"
             value={query}
