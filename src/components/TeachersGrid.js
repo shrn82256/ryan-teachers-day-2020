@@ -45,23 +45,16 @@ function TeachersGrid({ teachers }) {
 
     const teacher = teachers[currentTeacherIndex];
 
-    const teacherName = (
-      <div style={{ fontSize: '2em', fontWeight: 'bold' }}>{teacher.name}</div>
-    );
+    const teacherName = <div className="teacher-name">{teacher.name}</div>;
     const teacherClass = teacher.class ? (
-      <span
-        className="tag is-light"
-        style={{ fontWeight: 'bold', fontSize: '1em' }}
-      >
-        {teacher.class}
-      </span>
+      <span className="teacher-class tag is-light">{teacher.class}</span>
     ) : null;
     const teacherQuality = (
-      <div style={{ fontSize: '1.2em' }}>
+      <div className="teacher-quality">
         {teacher.quality ? (
           <>
             <span>We love you beacuse you're </span>
-            <span style={{ fontWeight: 'bold' }}>{teacher.quality}</span>
+            <span className="has-text-weight-bold">{teacher.quality}</span>
           </>
         ) : (
           teacher.note
@@ -80,7 +73,7 @@ function TeachersGrid({ teachers }) {
           onClick={() => setTeacherModalStatus(false)}
         />
         <div className="modal-content">
-          <div className="card has-text-light" style={{ padding: 20 }}>
+          <div className="card has-text-light">
             <div className="card-content">
               <div className="columns">
                 <div className="column is-8">{teacherName}</div>

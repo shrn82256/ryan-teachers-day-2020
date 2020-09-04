@@ -8,7 +8,7 @@ function Footer() {
       <div className="content has-text-centered">
         <p>
           <span>Made with </span>
-          <span style={{ color: 'red' }}>❤</span>
+          <span className="has-text-red">❤</span>
           <span> by Ryanites.</span>
         </p>
         <br />

@@ -90,9 +90,24 @@ body,
       border: 10px solid grey;
 
       div.card {
+        padding: 20px;
         background-color: #346b31;
         div.card-content {
           background-color: inherit;
+
+          .teacher-name {
+            font-size: 2em;
+            font-weight: bold;
+          }
+
+          .teacher-class {
+            font-size: 1em;
+            font-weight: bold;
+          }
+
+          .teacher-quality {
+            font-size: 1.2em;
+          }
         }
       }
     }
@@ -115,6 +130,10 @@ body,
   width: 75%;
 }
 
-.w-75 {
+.w-100 {
   width: 100%;
+}
+
+.has-text-red {
+  color: red;
 }
